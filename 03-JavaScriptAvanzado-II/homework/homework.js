@@ -49,14 +49,14 @@ Esta función debe aceptar un argumento (arg) e invocar a cb con ese argumento;
   squareCache(5)    // no volverá a invocar a square, simplemente buscará en la caché cuál es el resultado de square(5) y lo retornará (tip: si usaste un objeto, podés usar hasOwnProperty) */
 
 function cacheFunction(cb) {
-    let newobjeto={}
+    let memoriaCache={}
     return function(arg){
-      if (newobjeto.hasOwnProperty(arg)){
-        return newobjeto[arg]
+      if (memoriaCache.hasOwnProperty(arg)){
+        return memoriaCache[arg]
       }
-      const result = cb(arg);
-          newobjeto[arg] = result;
-          return result;
+      const resultado = cb(arg);
+          memoriaCache[arg] = resultado;
+          return resultado;
   }
 }
 
@@ -83,8 +83,8 @@ function getNombre() {
   Usando el método bind() guardar, en las dos variables declaradas a continuación, dos funciones que actúen como getNombre pero retornen el nombre del instructor y del alumno, respectivamente.
 */
 
-let getNombreInstructor = getNombre.bind();
-let getNombreAlumno = getNombre.bind();
+let getNombreInstructor = getNombre.bind(instructor);
+let getNombreAlumno = getNombre.bind(alumno);
 
 /*
   Ejercicio 4
@@ -95,9 +95,9 @@ function crearCadena(delimitadorIzquierda, delimitadorDerecha, cadena) {
     return delimitadorIzquierda + cadena + delimitadorDerecha;
 }
 
-let textoAsteriscos = crearCadena.bind();
-let textoGuiones = crearCadena.bind();
-let textoUnderscore = crearCadena.bind();
+let textoAsteriscos = crearCadena.bind(this,"*","*");
+let textoGuiones = crearCadena.bind(this,"-","-");
+let textoUnderscore = crearCadena.bind(this,"_","_");
 
 // No modifiquen nada debajo de esta linea
 // --------------------------------
