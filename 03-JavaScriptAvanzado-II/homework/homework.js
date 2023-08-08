@@ -59,6 +59,17 @@ function cacheFunction(cb) {
           return resultado;
   }
 }
+function square(n){
+  return n * n
+}
+const squareCache = cacheFunction(square)
+squareCache(2)
+squareCache(3)
+squareCache(4)
+squareCache(5)
+console.log(squareCache(2));
+
+
 
 //----------------------------------------
 
@@ -98,6 +109,7 @@ function crearCadena(delimitadorIzquierda, delimitadorDerecha, cadena) {
 let textoAsteriscos = crearCadena.bind(this,"*","*");
 let textoGuiones = crearCadena.bind(this,"-","-");
 let textoUnderscore = crearCadena.bind(this,"_","_");
+console.log(textoAsteriscos()); //*undefined*
 
 // No modifiquen nada debajo de esta linea
 // --------------------------------

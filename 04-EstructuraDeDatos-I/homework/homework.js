@@ -67,25 +67,25 @@ Queue.prototype.dequeue = function(valor){
 Queue.prototype.size = function(){
   return this.fila.length;
 };
-let miQueue = new Queue();
-miQueue.enqueue(3);
-miQueue.enqueue(56);
-miQueue.enqueue(45);
-miQueue.enqueue(34);
+// let miQueue = new Queue();
+// miQueue.enqueue(3);
+// miQueue.enqueue(56);
+// miQueue.enqueue(45);
+// miQueue.enqueue(34);
 
-console.log(Queue);
-console.log(miQueue);
-console.log(miQueue.size());
-console.log(miQueue.dequeue());
-let probando= new Queue();
-probando.enqueue(5);
-probando.enqueue(54);
-probando.enqueue(45);
-probando.enqueue(90);
-console.log(probando);
-console.log(probando.dequeue());
-console.log(probando);
-console.log(probando.size());
+// console.log(Queue);
+// console.log(miQueue);
+// console.log(miQueue.size());
+// console.log(miQueue.dequeue());
+// let probando= new Queue();
+// probando.enqueue(5);
+// probando.enqueue(54);
+// probando.enqueue(45);
+// probando.enqueue(90);
+// console.log(probando);
+// console.log(probando.dequeue());
+// console.log(probando);
+// console.log(probando.size());
 
 
 /*⚠️ No modificar nada debajo de esta línea ⚠️*/

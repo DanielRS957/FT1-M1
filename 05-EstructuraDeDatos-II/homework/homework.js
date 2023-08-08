@@ -25,14 +25,14 @@ function Node(value) {
 };
 LinkedList.prototype.add = function(value){
 let nodo = new Node(value); //valor ingresado
-let dato = this.head; //null
-if(!dato){                                                    //si dato esta vacio 
-  this.head = nodo;                                                // la propiedad head esta apuntando igual al valor ingresado para nodo
+let current = this.head; //null
+if(!current){                                                    //si dato esta vacio 
+  this.head = current;                                                // la propiedad head esta apuntando igual al valor ingresado para nodo
 }else{
-  while(dato.next){ //mientra sea igual a null
-    dato = dato.next;
+  while(current.next){ //mientra sea igual a null
+    current = current.next;
   }
-  dato.next = nodo;
+  current.next = nodo;
 }
   this._length++;
   // let newNodo = new Node(value);
@@ -135,12 +135,12 @@ Para este ejercicio, la tabla debe tener 35 buckets (numBuckets = 35). (Luego de
   
   HashTable.prototype.hash= function (clave){
     // =0; i<clave.length; i++
-    let sumaNumerico = 0;
+    let suma = 0;
     for(let i of clave ){
-      sumaNumerico += i.charCodeAt();
+      suma += i.charCodeAt();
     // console.log(sumaNumerico);
   }
-  return sumaNumerico%this.numBuckets;
+  return suma%this.numBuckets;
 };
 //set: recibe el conjunto clave valor (como dos parámetros distintos),
 // hashea la clave invocando al método hash, y almacena todo el conjunto en el bucket correcto.

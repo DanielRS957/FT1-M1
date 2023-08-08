@@ -86,13 +86,13 @@ console.log(pm); // "Franco"
 7 / 0 // Infinity
 {}[0] // undifine
 parseInt("09") // 9
-5 && 2
-2 && 5
-5 || 0
-0 || 5
-[3]+[3]-[10]
-3>2>1
-[] == ![]
+5 && 2 //2
+2 && 5//5
+5 || 0//5
+0 || 5//5
+[3]+[3]-[10]//23
+3>2>1 //false
+[] == ![] // true
 ```
 
 > Si te quedó alguna duda repasá con [este artículo](http://javascript.info/tutorial/object-conversion).
@@ -103,8 +103,8 @@ parseInt("09") // 9
 
 ```javascript
 function test() {
-   console.log(a);
-   console.log(foo());
+   console.log(a);// undefined
+   console.log(foo()); // funtion not defined
 
    var a = 1;
    function foo() {
@@ -112,7 +112,7 @@ function test() {
    }
 }
 
-test();
+test();//2
 ```
 
 Y el de este código? :
@@ -123,12 +123,12 @@ var snack = 'Meow Mix';
 function getFood(food) {
    if (food) {
       var snack = 'Friskies';
-      return snack;
+      return snack; // "Friskies"
    }
-   return snack;
+   return snack; // "undefined"
 }
 
-getFood(false);
+getFood(false);// undifined
 ```
 
 ### This

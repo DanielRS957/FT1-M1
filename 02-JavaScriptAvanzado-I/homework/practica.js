@@ -84,10 +84,12 @@
 //       var snack = 'Friskies';
 //       return snack;    
 //    }
+// //    console.log(snack);
 //    return snack; 
 // }
 
 // getFood(false); // undefined
+
 // console.log(getFood(false));
 
 // var fullname = 'Juan Perez';
@@ -96,15 +98,16 @@
 //    prop: {
 //       fullname: 'Aurelio De Rosa',
 //       getFullname: function () {
-//          return this.fullname;
-//       },
-//    },
-// };
+//          console.log(this.fullname);
+//       }
+//    }
+// }
 // console.log(fullname);
 
 // var fullname = {fullname: "daniel roman"};
-
-// console.log(fullname);console.log(fullname);
+// console.log(fullname);
+// console.log(this.fullname);
+// let funcionBind = obj.prop.getFullname.bind(obj);
 
 // console.log(obj.prop.getFullname());
 // console.log(obj);
@@ -115,3 +118,65 @@
 //    constructor(nombre,edad,peso,hobby,perro)
 // }
 // console.log(this.nombre);
+
+//crear una funcion multiplicaar CLOUSURE
+// function multiplicar (num){
+//    let tabla = []
+//    function calcularRango(rango){
+//       if(rango < 11){
+//          tabla.push(num * rango)
+//          calcularRango(rango + 1 );
+//       }
+//    }
+//    calcularRango(1);
+//    return function(){
+//       return tabla;
+//    }
+// }
+// let tablaDos = multiplicar(2)
+// console.log(tablaDos());
+// let tablaNueve = multiplicar(9)
+// console.log((tablaNueve()));
+// let tablaUno = multiplicar(1)
+// let tablaTres = multiplicar(3)
+// let tablaCuatro = multiplicar(4)
+// let tablaCinco = multiplicar(5)
+// let tablaSeis = multiplicar(6)
+// let tablaSiete = multiplicar(7)
+// let tablaOcho = multiplicar(8)
+/////////////////////////////////////////
+////////////////////////////////////////
+// PRACTICANDO CON OBJETOS
+
+
+// let menu = {
+//     hamburguesas:{
+//         rachera:{grande : 15.000,
+//                 mediana: 12.000,
+//                 pequeña: 10.000,
+//         },
+//         vegetariana:{grande: 15.000,
+//                     mediana: 12.000,
+//                     pequeña: 10.000,
+//         },
+//         tresQuesos:{grande: 15.000,
+//                     mediana: 12.000,
+//                     pequeña: 10.000,
+//         },
+       
+//     },
+//     salchipapa:{ranchera:{conQueso:12.000,
+//                         sinQueso: 9.000,
+//                     },
+                
+//     },
+//     perroCaliente:{grande: 15.000,
+//                 mediana: 12.000,
+//                 pequeña: 10.000,
+//     },
+//     bebidas:{
+//         limonada: 7.000,
+//         jugoHit: 6.000,
+//         limonadaDeCoco:7.000,
+//     }
+// }
