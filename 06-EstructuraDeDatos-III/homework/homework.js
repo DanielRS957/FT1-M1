@@ -49,10 +49,13 @@ BinarySearchTree.prototype.contains = function(value){
    let current = this.root;
    let resultado;
    if(current){
-      if(!this.left){
+      if(this.left){
          this.left.contains(value);
       }
-      current===value;
+      else if(current === value){
+         return true;
+      }
+      this.left.contains(value);
    }
    else if(this.right){
          this.right.contains(value);
@@ -63,9 +66,10 @@ BinarySearchTree.prototype.contains = function(value){
 let nueva = new BinarySearchTree(9);
 nueva.insert(11);
 nueva.insert(5);
-nueva.insert(44)
+// nueva.insert()
 console.log(nueva);
 console.log(nueva.size());
+nueva.contains(5);
 
 
 
